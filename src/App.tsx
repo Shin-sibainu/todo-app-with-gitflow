@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Todo from "./components/Todo";
 
 function App() {
   const [title, setTitle] = useState<string>("");
@@ -22,7 +23,6 @@ function App() {
       setTitle(""); // Reset input after adding
     }
   };
-
   return (
     <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-32 py-4 px-4">
       <div className="px-4 py-2">
@@ -53,9 +53,9 @@ function App() {
         </div>
       </form>
       <ul className="divide-y divide-gray-200 px-4">
-        {/* {data?.map((todo) => (
-          <Todo key={todo.id} todo={todo} />
-        ))} */}
+        <Todo key={1} />
+        <Todo key={2} />
+        <Todo key={3} />
       </ul>
     </div>
   );
